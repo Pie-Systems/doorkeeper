@@ -77,7 +77,7 @@ module Doorkeeper
 
       def authenticate_info
         info = %(Bearer realm="#{realm}", error="#{name}", error_description="#{description}")
-        Rails.logger.warn "[Error][Doorkeeper] #{info}"
+        ::Rails.logger.warn "[Error][Doorkeeper] #{info}"
         info
       end
     end
